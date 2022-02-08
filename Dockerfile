@@ -20,6 +20,6 @@ RUN apt-get update
 RUN apt-get install default-jdk -y
 
 # pip install -r binder/requirements.txt
-pip install numpy
-pip install pandas
-pip install pyspark
+RUN pip install numpy
+RUN pip install pandas
+RUN pip install pyspark
