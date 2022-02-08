@@ -1,11 +1,13 @@
 FROM python:3.9-slim
+FROM jupyter/all-spark-notebook:17aba6048f44
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip
 #RUN pip install --no-cache notebook jupyterlab
-
-RUN pip install --no-cache-dir notebook
+#RUN pip install --no-cache-dir notebook
 #RUN pip install --no-cache-dir jupyterhub
+
+RUN pip install --no-cache-dir vdom==0.5
 
 # create user with a home directory
 ARG NB_USER=kanakpc
